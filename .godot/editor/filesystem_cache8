@@ -1,0 +1,12 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1725120723
+icon.svg::CompressedTexture2D::941828969848350757::1725019300::1725019303::1::::<><>::
+::res://assets/::1725021015
+::res://assets/hdris/::1725021015
+kloofendal_48d_partly_cloudy_puresky_2k.hdr::CompressedTexture2D::6834540267667892201::1725021004::1725021018::1::::<><>::
+::res://Scenes/::1725118099
+main.tscn::PackedScene::1809511616313197598::1725118102::0::1::::<><>::uid://vmrk2hcv3rgh::::res://Scenes/purple_plate.tscn<>uid://c4mx455sh87fh::::res://assets/hdris/kloofendal_48d_partly_cloudy_puresky_2k.hdr<>uid://sj6xq1oaou33::::res://Scenes/player.tscn
+player.tscn::PackedScene::1283902766481881300::1725118102::0::1::::<><>::res://Scripts/player.gd
+purple_plate.tscn::PackedScene::1499789725327615303::1725118102::0::1::::<><>::
+::res://Scripts/::1725020720
+player.gd::GDScript::-1::1725020705::0::1::::<>CharacterBody3D<>::

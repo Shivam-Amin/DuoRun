@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://vmrk2hcv3rgh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hc22l"]
+albedo_color = Color(0.537255, 0.168627, 0.827451, 0.878431)
+
+[node name="PurplePlate" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(0.999746, 0, 0, 0, 0.999746, 0, 0, 0, 0.999746, -0.000702381, 0.00183082, -0.000331998)
+material_override = SubResource("StandardMaterial3D_hc22l")
+use_collision = true
+size = Vector3(0.244141, 0.192383, 2.22363)

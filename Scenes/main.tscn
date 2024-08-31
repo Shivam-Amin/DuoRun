@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://01snldd37x4i"]
+
+[ext_resource type="PackedScene" uid="uid://vmrk2hcv3rgh" path="res://Scenes/purple_plate.tscn" id="1_8m3wc"]
+[ext_resource type="Texture2D" uid="uid://c4mx455sh87fh" path="res://assets/hdris/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="2_jhl1c"]
+[ext_resource type="PackedScene" uid="uid://sj6xq1oaou33" path="res://Scenes/player.tscn" id="2_yfjjr"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_xoeol"]
+panorama = ExtResource("2_jhl1c")
+
+[sub_resource type="Sky" id="Sky_llc5t"]
+sky_material = SubResource("PanoramaSkyMaterial_xoeol")
+
+[sub_resource type="Environment" id="Environment_0y0rp"]
+background_mode = 2
+sky = SubResource("Sky_llc5t")
+
+[node name="Main" type="Node3D"]
+
+[node name="plates" type="Node3D" parent="."]
+
+[node name="PurplePlate" parent="plates" instance=ExtResource("1_8m3wc")]
+
+[node name="env" type="Node3D" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="env"]
+transform = Transform3D(1, -0.000245817, -0.000192747, 0.000192834, 0.00035276, 1, -0.000245749, -1, 0.000352808, 0.000893831, 1.80552, 1.97313)
+light_energy = 0.367
+light_volumetric_fog_energy = 2.76
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="env"]
+environment = SubResource("Environment_0y0rp")
+
+[node name="Player" parent="." instance=ExtResource("2_yfjjr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.001, 0.201995, 0.352423)

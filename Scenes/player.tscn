@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://sj6xq1oaou33"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_2vmti"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o35da"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1xmq7"]
+albedo_color = Color(0.537255, 0.168627, 0.827451, 0.878431)
+
+[node name="Player" type="CharacterBody3D"]
+collision_layer = 2
+script = ExtResource("1_2vmti")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+shape = SubResource("BoxShape3D_o35da")
+
+[node name="visual" type="Node3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="visual"]
+transform = Transform3D(0.099995, 0.0010018, 0, -0.0010018, 0.099995, 0, 0, 0, 0.1, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_1xmq7")
+
+[node name="camera_mount" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="camera_mount"]
+transform = Transform3D(0.435673, -0.0903197, 0.895562, 0.0395114, 0.995913, 0.0812189, -0.899237, -5.50458e-10, 0.437461, 0.921519, 0.287375, 0.427809)
