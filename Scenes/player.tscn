@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://sj6xq1oaou33"]
+[gd_scene load_steps=5 format=3 uid="uid://sj6xq1oaou33"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_2vmti"]
+[ext_resource type="PackedScene" uid="uid://cui7fxqicnsdq" path="res://Scenes/smoke.tscn" id="2_v3n50"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_o35da"]
 
@@ -24,4 +25,7 @@ material_override = SubResource("StandardMaterial3D_1xmq7")
 [node name="camera_mount" type="Node3D" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="camera_mount"]
-transform = Transform3D(0.435673, -0.0903197, 0.895562, 0.0395114, 0.995913, 0.0812189, -0.899237, -5.50458e-10, 0.437461, 0.921519, 0.287375, 0.427809)
+transform = Transform3D(0.4735, -0.0902381, 0.876159, 0.0395114, 0.995913, 0.0812188, -0.879907, -0.00383886, 0.47513, 1.01253, 0.287375, 0.252464)
+
+[node name="Smoke" parent="." instance=ExtResource("2_v3n50")]
+transform = Transform3D(-4.37114e-08, -3.48787e-16, -1, 3.48787e-16, 1, -3.48787e-16, 1, -3.48787e-16, -4.37114e-08, 2.08165e-12, -0.05, 2.08165e-12)

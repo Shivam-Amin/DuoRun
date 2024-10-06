@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://cui7fxqicnsdq"]
+
+[sub_resource type="Gradient" id="Gradient_yvp7q"]
+offsets = PackedFloat32Array(0, 0.920188, 0.995305, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.131455, 0.131455, 0.131455, 1, 0.295415, 0.295415, 0.295415, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_51lnx"]
+gradient = SubResource("Gradient_yvp7q")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cuj3x"]
+albedo_color = Color(1, 0.223529, 1, 1)
+albedo_texture = SubResource("GradientTexture1D_51lnx")
+
+[sub_resource type="SphereMesh" id="SphereMesh_rh2yu"]
+radius = 0.2
+height = 0.3
+radial_segments = 6
+rings = 6
+
+[sub_resource type="Curve" id="Curve_taq8q"]
+max_value = 2.0
+_data = [Vector2(0.00803858, 0.0100878), 0.0, 0.412368, 0, 0, Vector2(1, 0.162382), -0.0487281, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_5jg34"]
+
+[sub_resource type="Gradient" id="Gradient_tg2xj"]
+
+[node name="Smoke" type="Node3D"]
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="."]
+transform = Transform3D(0.798688, -0.601745, 0, 0.601745, 0.798688, 0, 0, 0, 1, 0.0523573, 0, 0)
+material_override = SubResource("StandardMaterial3D_cuj3x")
+emitting = false
+amount = 60
+lifetime = 0.09
+speed_scale = 0.7
+randomness = 0.54
+mesh = SubResource("SphereMesh_rh2yu")
+spread = 4.67
+gravity = Vector3(2.08165e-12, -15, 2.08165e-12)
+initial_velocity_min = 0.5
+initial_velocity_max = 0.9
+angular_velocity_max = 2.0
+scale_amount_min = 0.0
+scale_amount_max = 0.2
+scale_amount_curve = SubResource("Curve_taq8q")
+color = Color(0.585667, 0.12105, 0.204995, 1)
+color_ramp = SubResource("Gradient_5jg34")
+color_initial_ramp = SubResource("Gradient_tg2xj")

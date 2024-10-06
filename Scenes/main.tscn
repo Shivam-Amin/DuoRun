@@ -20,6 +20,9 @@ sky = SubResource("Sky_llc5t")
 
 [node name="PurplePlate" parent="plates" instance=ExtResource("1_8m3wc")]
 
+[node name="PurplePlate2" parent="plates" instance=ExtResource("1_8m3wc")]
+transform = Transform3D(1, 0, -1.5246e-23, -1.5246e-23, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.487468, -9.91806)
+
 [node name="env" type="Node3D" parent="."]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="env"]
@@ -32,4 +35,4 @@ shadow_enabled = true
 environment = SubResource("Environment_0y0rp")
 
 [node name="Player" parent="." instance=ExtResource("2_yfjjr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.001, 0.201995, 0.352423)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.001, 0.201995, 9.81325)
