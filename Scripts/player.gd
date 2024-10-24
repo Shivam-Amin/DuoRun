@@ -40,6 +40,7 @@ func _physics_process(delta):
 	if not is_on_floor():
 		if cayote_counter > 0:
 			cayote_counter -= 1
+			jump_counter = 0
 		
 		if jump_buffer_counter > 0 and jump_counter < 1:
 			cayote_counter = 1
