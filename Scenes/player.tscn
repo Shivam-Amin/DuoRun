@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://sj6xq1oaou33"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_2vmti"]
-[ext_resource type="PackedScene" uid="uid://cui7fxqicnsdq" path="res://Scenes/smoke.tscn" id="2_v3n50"]
+[ext_resource type="PackedScene" uid="uid://jsr0spp8kfc2" path="res://Scenes/smoke_3.tscn" id="2_u2lxq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_o35da"]
 
@@ -13,13 +13,13 @@ collision_layer = 2
 script = ExtResource("1_2vmti")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
 shape = SubResource("BoxShape3D_o35da")
 
 [node name="visual" type="Node3D" parent="."]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="visual"]
-transform = Transform3D(0.099995, 0.0010018, 0, -0.0010018, 0.099995, 0, 0, 0, 0.1, 0, 0, 0)
+transform = Transform3D(0.149992, 0.0015027, 0, -0.0015027, 0.149992, 0, 0, 0, 0.15, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_1xmq7")
 
 [node name="camera_mount" type="Node3D" parent="."]
@@ -27,5 +27,8 @@ material_override = SubResource("StandardMaterial3D_1xmq7")
 [node name="Camera3D" type="Camera3D" parent="camera_mount"]
 transform = Transform3D(0.4735, -0.0902381, 0.876159, 0.0395114, 0.995913, 0.0812188, -0.879907, -0.00383886, 0.47513, 1.01253, 0.287375, 0.252464)
 
-[node name="Smoke" parent="." instance=ExtResource("2_v3n50")]
-transform = Transform3D(-4.37114e-08, -3.48787e-16, -1, 3.48787e-16, 1, -3.48787e-16, 1, -3.48787e-16, -4.37114e-08, 2.08165e-12, -0.05, 2.08165e-12)
+[node name="Smoke3" parent="." instance=ExtResource("2_u2lxq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, -0.075, 0.075)
+
+[node name="Smoke4" parent="." instance=ExtResource("2_u2lxq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, -0.075, 0.075)

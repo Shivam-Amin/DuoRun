@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=3 uid="uid://jsr0spp8kfc2"]
+
+[sub_resource type="Gradient" id="Gradient_lgbmm"]
+offsets = PackedFloat32Array(0, 0.5)
+colors = PackedColorArray(1, 1, 1, 1, 0.235646, 0.0535241, 0.403674, 1)
+metadata/_snap_enabled = true
+metadata/_snap_count = 8
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_lg5hs"]
+gradient = SubResource("Gradient_lgbmm")
+
+[sub_resource type="Curve" id="Curve_qoh4n"]
+max_value = 0.1
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.137842, 0.0111373), 0.0, 0.0, 0, 0, Vector2(1, 0.00872969), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_ryrgo"]
+curve = SubResource("Curve_qoh4n")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_apnal"]
+emission_shape = 1
+emission_sphere_radius = 0.05
+angle_max = 360.0
+direction = Vector3(2.08165e-12, 20, 10)
+spread = 1.99
+initial_velocity_max = 1.0
+gravity = Vector3(2.08165e-12, -0.4, 2.08165e-12)
+scale_min = 0.0
+scale_max = 10.0
+scale_curve = SubResource("CurveTexture_ryrgo")
+color = Color(0.537255, 0.168627, 0.827451, 0.878431)
+color_ramp = SubResource("GradientTexture1D_lg5hs")
+anim_speed_min = 0.4
+anim_speed_max = 1.0
+anim_offset_min = 0.4
+anim_offset_max = 1.0
+collision_use_scale = true
+sub_emitter_mode = 2
+sub_emitter_amount_at_end = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ppoj"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+shading_mode = 0
+vertex_color_use_as_albedo = true
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 6
+particles_anim_v_frames = 5
+particles_anim_loop = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_mhk7y"]
+material = SubResource("StandardMaterial3D_4ppoj")
+
+[node name="Smoke3" type="GPUParticles3D"]
+amount = 200
+lifetime = 0.7
+randomness = 1.0
+fixed_fps = 60
+visibility_aabb = AABB(-1.71574, -1.18741, -1.17093, 3.43148, 2.37481, 2.34186)
+draw_order = 3
+process_material = SubResource("ParticleProcessMaterial_apnal")
+draw_pass_1 = SubResource("QuadMesh_mhk7y")

@@ -2,3 +2,6 @@ res://Scenes/main.tscn
 res://Scenes/purple_plate.tscn
 res://Scenes/player.tscn
 res://Scenes/smoke.tscn
+res://Scenes/smoke_2.tscn
+res://Scenes/smoke_3.tscn
+res://Scripts/player.gd

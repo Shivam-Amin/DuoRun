@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1gixc7y08h4q"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_43a8s"]
+emission_shape = 1
+emission_sphere_radius = 0.3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_70pww"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+shading_mode = 0
+albedo_color = Color(1, 1, 1, 0.945098)
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_o3m0f"]
+material = SubResource("StandardMaterial3D_70pww")
+
+[node name="Smoke2" type="GPUParticles3D"]
+emitting = false
+amount = 100
+amount_ratio = 0.3
+fixed_fps = 60
+fract_delta = false
+process_material = SubResource("ParticleProcessMaterial_43a8s")
+draw_pass_1 = SubResource("QuadMesh_o3m0f")

@@ -9,4 +9,4 @@ albedo_color = Color(0.537255, 0.168627, 0.827451, 0.878431)
 transform = Transform3D(0.999746, 0, 0, 0, 0.999746, 0, 0, 0, 0.999746, -0.000702381, 0.00183082, -0.000331998)
 material_override = SubResource("StandardMaterial3D_hc22l")
 use_collision = true
-size = Vector3(0.208008, 0.142334, 20.4553)
+size = Vector3(0.276, 0.14, 20.455)
