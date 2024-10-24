@@ -12,8 +12,6 @@ extends CharacterBody3D
 @export var jump_buffer_frames = 15
 
 
-
-
 const SPEED: float = 2.0
 #const JUMP_VELOCITY = 3.2
 #const MAX_JUMP_VELOCITY = 10
